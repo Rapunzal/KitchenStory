@@ -1,0 +1,37 @@
+<p>admin works!</p>
+<div class="card" style="width: 18rem;">
+    <form #userForm="ngForm" (ngSubmit)="myadmin( )">
+       <table>
+        <tr>
+            <th></th>
+            <th colspan="2"><h4>Admin Login</h4></th>
+        </tr>
+        <tr>
+            <td>
+        <label for="username" >Username :</label>
+    </td>
+    <td>
+        <span *ngIf="username.invalid && username.untouched" style="color:red"></span>
+       
+        <input type="text" required name="myusername"  #username="ngModel" [(ngModel)]="admin.username">
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="password">Password :</label>
+    </td>
+    <td>
+        <span *ngIf="password.invalid && password.untouched" style="color:red"></span>
+        <input type="password" name="mypassword"  #password="ngModel" [(ngModel)]="admin.password" >
+    </td>
+</tr>
+<tr><td></td>
+    <td>
+        <button type="submit"  class="btn btn-primary" routerLink="/success">Login</button>
+       
+    </td>
+    </tr>
+    </table> 
+    </form>
+    {{message}}
+</div>

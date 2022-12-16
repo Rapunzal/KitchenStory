@@ -1,0 +1,33 @@
+<p>food-order works!</p>
+<!--{{food|json}}
+{{id}}
+-->
+<div class="card text-center" >
+<form style="margin:auto;width:900">
+    <div class="text-center" >
+    <table >
+       
+       <tr> <td>Customer Name :</td><td> <input type="text" name="name" #name></td></tr>
+      <tr> <td> Customer Phone: </td><td><input type="number" name="contactno" #contact></td></tr>
+      <tr> <td> Type of Delivery: </td><td><input type="text" name="delivery" #delivery></td></tr>
+       <tr> <td></td><td><input type="submit" value="submit"></td></tr>
+    
+    </table>
+</div>
+</form>
+{{name.value}}
+<br>
+{{contact.value}}
+<br>
+{{delivery.value}}
+<ng-container *ngFor="let item of food">
+    <div *ngIf="item.id == id">
+        Item Name: {{item.name}}
+        <br>
+        Item Price :{{item.price | currency:'INR'}}
+        <br>
+
+<button input="submit" class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/payment']">Payment</button>
+    </div>
+</ng-container>
+</div>

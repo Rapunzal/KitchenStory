@@ -1,0 +1,41 @@
+<p>food-add works!</p>
+
+<h3>{{successmessage}}</h3>
+<form (ngSubmit)="AddFood()">
+    <table>
+        <tr>
+            <th></th>
+            <th>Add Food</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Food Name </label>
+            </td>
+            <td>
+                <input type="text" name="name" placeholder="Name" [(ngModel)]="food.name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Price </label>
+            </td>
+            <td>
+                <input type="number" name="price" placeholder="Price" [(ngModel)]="food.price">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+            <label for="name">Category </label>
+            </td>
+            <td>
+                <input type="text" name="category" placeholder="Category" [(ngModel)]="food.category">
+            </td>
+        </tr>
+
+<tr><td></td><td>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </td>
+    </tr>
+    </table>
+</form>
